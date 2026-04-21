@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Courses</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand">Student Portal</a>
+</div>
+</nav>
+
+<div class="container">
+<div class="container-box">
+<h2>Select Courses</h2>
+
+<label><input type="checkbox" value="Web Development"> Web Development</label><br>
+<label><input type="checkbox" value="Artificial Intelligence"> Artificial Intelligence</label><br>
+<label><input type="checkbox" value="Database Systems"> Database Systems</label><br>
+<label><input type="checkbox" value="Mobile App Development"> Mobile App Development</label><br>
+
+<button onclick="showCourses()" class="btn btn-primary mt-3">Submit</button>
+
+</div>
+</div>
+
+<script>
+function showCourses() {
+let selected = [];
+document.querySelectorAll("input[type=checkbox]:checked")
+.forEach(el => selected.push(el.value));
+
+alert("Selected: " + selected.join(", "));
+}
+</script>
+
+</body>
+</html>
